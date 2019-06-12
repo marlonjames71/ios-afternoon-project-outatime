@@ -11,6 +11,7 @@ import UIKit
 class TimeCircuitsViewController: UIViewController {
 
 	var currentSpeed: Int = 0
+	var datePickerVC = DatePickerViewController()
 	
 	@IBOutlet var destinationTimeLabel: UILabel!
 	@IBOutlet var presentTimeLabel: UILabel!
@@ -41,11 +42,13 @@ class TimeCircuitsViewController: UIViewController {
 	}
 
 	
+	
 	@IBAction func travelBackButtonTapped(_ sender: UIButton) {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		<#code#>
+		guard let datePickerVC = segue.destination as? DatePickerViewController else { return }
+		datePickerVC.delegate = self
 	}
 	
 	
@@ -54,7 +57,8 @@ class TimeCircuitsViewController: UIViewController {
 
 extension TimeCircuitsViewController: DatePickerDelegate {
 	func destinationDateWasChosen(date: Date) {
-		updateViews()
+		destinationTimeLabel.text = dateFormatter.string(from: date)
+		print("Hello")
 	}
 }
 
