@@ -13,6 +13,7 @@
 		370CE35422B18A1000B66EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370CE35322B18A1000B66EDA /* Assets.xcassets */; };
 		370CE35722B18A1000B66EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370CE35522B18A1000B66EDA /* LaunchScreen.storyboard */; };
 		370CE36122B195BD00B66EDA /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 370CE35E22B18A3500B66EDA /* digital-7.ttf */; };
+		370CE36322B19D9900B66EDA /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370CE36222B19D9900B66EDA /* DatePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		370CE35622B18A1000B66EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		370CE35822B18A1000B66EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370CE35E22B18A3500B66EDA /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		370CE36222B19D9900B66EDA /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				370CE34C22B18A0F00B66EDA /* AppDelegate.swift */,
-				370CE34E22B18A0F00B66EDA /* TimeCircuitsViewController.swift */,
+				370CE36422B19DC200B66EDA /* View Controllers */,
 				370CE35022B18A0F00B66EDA /* Main.storyboard */,
 				370CE35322B18A1000B66EDA /* Assets.xcassets */,
 				370CE35522B18A1000B66EDA /* LaunchScreen.storyboard */,
@@ -73,6 +75,15 @@
 				370CE35E22B18A3500B66EDA /* digital-7.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		370CE36422B19DC200B66EDA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				370CE34E22B18A0F00B66EDA /* TimeCircuitsViewController.swift */,
+				370CE36222B19D9900B66EDA /* DatePickerViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			files = (
 				370CE34F22B18A0F00B66EDA /* TimeCircuitsViewController.swift in Sources */,
 				370CE34D22B18A0F00B66EDA /* AppDelegate.swift in Sources */,
+				370CE36322B19D9900B66EDA /* DatePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

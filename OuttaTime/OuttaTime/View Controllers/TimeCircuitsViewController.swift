@@ -12,23 +12,33 @@ class TimeCircuitsViewController: UIViewController {
 
 	var currentSpeed: Int = 0
 	
+	@IBOutlet var destinationTimeLabel: UILabel!
+	@IBOutlet var presentTimeLabel: UILabel!
+	@IBOutlet var lastTimeDepartedLabel: UILabel!
+	@IBOutlet var speedLabel: UILabel!
 	
 	
 	
 	var dateFormatter: DateFormatter = {
 		let formatter = DateFormatter()
-		formatter.dateFormat = "EEE, MMM d, yyyy"
+		formatter.dateFormat = "MMM d, yyyy"
 		return formatter
 	}()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		presentTimeLabel.text = dateFormatter.string(from: Date())
+	}
+	
+	func updateViews() {
+		
 	}
 
 	@IBAction func unwindToCircuitsViewController(_ sender: UIStoryboardSegue) {
 		
 	}
-
+	@IBAction func travelBackButtonTapped(_ sender: UIButton) {
+	}
+	
 }
 
