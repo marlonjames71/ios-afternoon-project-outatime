@@ -33,12 +33,28 @@ class TimeCircuitsViewController: UIViewController {
 	func updateViews() {
 		
 	}
-
-	@IBAction func unwindToCircuitsViewController(_ sender: UIStoryboardSegue) {
-		
+	
+	func speed() -> String {
+		let newCurrentSpeed = String(currentSpeed) + " " + "MPH"
+		speedLabel.text = newCurrentSpeed
+		return newCurrentSpeed
 	}
+
+	
 	@IBAction func travelBackButtonTapped(_ sender: UIButton) {
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		<#code#>
+	}
+	
+	
+}
+
+
+extension TimeCircuitsViewController: DatePickerDelegate {
+	func destinationDateWasChosen(date: Date) {
+		updateViews()
+	}
 }
 

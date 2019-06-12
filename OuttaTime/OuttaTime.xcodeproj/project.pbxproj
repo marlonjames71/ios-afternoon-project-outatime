@@ -59,12 +59,12 @@
 			isa = PBXGroup;
 			children = (
 				370CE34C22B18A0F00B66EDA /* AppDelegate.swift */,
-				370CE36422B19DC200B66EDA /* View Controllers */,
 				370CE35022B18A0F00B66EDA /* Main.storyboard */,
+				370CE36422B19DC200B66EDA /* View Controllers */,
+				370CE36022B1956500B66EDA /* Fonts */,
 				370CE35322B18A1000B66EDA /* Assets.xcassets */,
 				370CE35522B18A1000B66EDA /* LaunchScreen.storyboard */,
 				370CE35822B18A1000B66EDA /* Info.plist */,
-				370CE36022B1956500B66EDA /* Fonts */,
 			);
 			path = OuttaTime;
 			sourceTree = "<group>";

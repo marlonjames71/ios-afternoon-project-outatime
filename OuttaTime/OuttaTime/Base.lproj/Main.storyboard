@@ -35,7 +35,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEP 12, 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4s-dr-fdR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUN 12, 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4s-dr-fdR">
                                                 <rect key="frame" x="0.0" y="28.5" width="374" height="32"/>
                                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="35"/>
                                                 <color key="textColor" red="1" green="0.19089189300000001" blue="0.40195929530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,8 +52,8 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- --, ----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cs4-Tp-1EG">
-                                                <rect key="frame" x="111.5" y="28.5" width="151" height="32"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--- -- ----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cs4-Tp-1EG">
+                                                <rect key="frame" x="114.5" y="28.5" width="145.5" height="32"/>
                                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="35"/>
                                                 <color key="textColor" red="0.41214379330000001" green="1" blue="0.6231969517" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -150,15 +150,14 @@
                                 <rect key="frame" x="357" y="832" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="doneButtonTapped:" destination="2JT-sN-sR4" eventType="touchUpInside" id="gkx-Ul-8Ld"/>
-                                    <action selector="doneButtonTapped:" destination="MRd-Zl-Sm4" eventType="touchUpInside" id="sjW-qU-gnj"/>
+                                    <action selector="doneButtonTapped:" destination="2JT-sN-sR4" eventType="touchUpInside" id="TxC-ZZ-ZjV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrN-5S-K7w">
                                 <rect key="frame" x="20" y="832" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="MRd-Zl-Sm4" kind="unwind" unwindAction="unwindToCircuitsViewController:" id="byq-xe-cXI"/>
+                                    <action selector="cancelButtonTapped:" destination="2JT-sN-sR4" eventType="touchUpInside" id="pMW-3Z-lL2"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="SRy-De-u12">
@@ -175,9 +174,9 @@
                             <constraint firstItem="SRy-De-u12" firstAttribute="leading" secondItem="f2e-MG-iGN" secondAttribute="leading" id="Jm7-EP-JCj"/>
                             <constraint firstItem="Rsf-z9-VUT" firstAttribute="top" secondItem="SRy-De-u12" secondAttribute="bottom" constant="20" id="QaB-Oa-1hh"/>
                             <constraint firstItem="f2e-MG-iGN" firstAttribute="bottom" secondItem="SRy-De-u12" secondAttribute="bottom" constant="50" id="V2T-iw-odC"/>
+                            <constraint firstItem="SRy-De-u12" firstAttribute="trailing" secondItem="f2e-MG-iGN" secondAttribute="trailing" id="WWa-xN-DRW"/>
                             <constraint firstItem="SRy-De-u12" firstAttribute="top" secondItem="f2e-MG-iGN" secondAttribute="top" constant="50" id="iLj-Pw-NJ3"/>
                             <constraint firstItem="ZrN-5S-K7w" firstAttribute="top" secondItem="SRy-De-u12" secondAttribute="bottom" constant="20" id="p4E-G6-zXR"/>
-                            <constraint firstItem="SRy-De-u12" firstAttribute="trailing" secondItem="f2e-MG-iGN" secondAttribute="trailing" id="vwu-3G-mf7"/>
                             <constraint firstItem="ZrN-5S-K7w" firstAttribute="leading" secondItem="f2e-MG-iGN" secondAttribute="leading" constant="20" id="xSc-cu-Pce"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f2e-MG-iGN"/>
@@ -187,7 +186,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qa-Xs-Af3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="MRd-Zl-Sm4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="757.97101449275374" y="20.758928571428569"/>
         </scene>
