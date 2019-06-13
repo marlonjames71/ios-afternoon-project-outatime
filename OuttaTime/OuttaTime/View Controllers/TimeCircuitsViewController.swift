@@ -34,7 +34,7 @@ class TimeCircuitsViewController: UIViewController {
 	
 	
 	func startTimer() {
-		timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateSpeed), userInfo: nil, repeats: true)
+		timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSpeed(timer:))
 	}
 	
 	
@@ -43,7 +43,7 @@ class TimeCircuitsViewController: UIViewController {
 	}
 	
 	
-	@objc func updateSpeed() {
+	func updateSpeed(timer: Timer) {
 		if currentSpeed < 88 {
 			currentSpeed += 1
 			speedLabel.text = "\(currentSpeed) MPH"
