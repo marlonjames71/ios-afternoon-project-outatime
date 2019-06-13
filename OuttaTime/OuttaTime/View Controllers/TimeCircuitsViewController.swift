@@ -20,7 +20,6 @@ class TimeCircuitsViewController: UIViewController {
 	@IBOutlet var speedLabel: UILabel!
 	
 	
-	
 	var dateFormatter: DateFormatter = {
 		let formatter = DateFormatter()
 		formatter.dateFormat = "MMM d, yyyy"
@@ -61,12 +60,11 @@ class TimeCircuitsViewController: UIViewController {
 		startTimer()
 	}
 	
+	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		guard let datePickerVC = segue.destination as? DatePickerViewController else { return }
 		datePickerVC.delegate = self
 	}
-	
-	
 }
 
 
