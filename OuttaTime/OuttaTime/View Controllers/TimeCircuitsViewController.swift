@@ -11,6 +11,7 @@ import UIKit
 class TimeCircuitsViewController: UIViewController {
 
 	var currentSpeed: Int = 0
+	var timer = Timer()
 	var datePickerVC = DatePickerViewController()
 	
 	@IBOutlet var destinationTimeLabel: UILabel!
@@ -31,19 +32,33 @@ class TimeCircuitsViewController: UIViewController {
 		presentTimeLabel.text = dateFormatter.string(from: Date())
 	}
 	
-	func updateViews() {
-		
+	
+	func startTimer() {
+		timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateSpeed), userInfo: nil, repeats: true)
 	}
 	
-	func speed() -> String {
-		let newCurrentSpeed = String(currentSpeed) + " " + "MPH"
-		speedLabel.text = newCurrentSpeed
-		return newCurrentSpeed
+	
+	func resetTimer() {
+		timer.invalidate()
 	}
-
+	
+	
+	@objc func updateSpeed() {
+		if currentSpeed < 88 {
+			currentSpeed += 1
+			speedLabel.text = "\(currentSpeed) MPH"
+		} else {
+			speedLabel.text = "\(currentSpeed) MPH"
+			currentSpeed = 0
+			lastTimeDepartedLabel.text = presentTimeLabel.text
+			presentTimeLabel.text = destinationTimeLabel.text
+			resetTimer()
+		}
+	}
 	
 	
 	@IBAction func travelBackButtonTapped(_ sender: UIButton) {
+		startTimer()
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,4 +76,5 @@ extension TimeCircuitsViewController: DatePickerDelegate {
 		print("Hello")
 	}
 }
+
 
