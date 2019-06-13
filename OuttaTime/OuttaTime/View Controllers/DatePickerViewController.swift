@@ -14,15 +14,18 @@ protocol DatePickerDelegate: AnyObject {
 
 class DatePickerViewController: UIViewController {
 
+	// MARK: - Properties & Outlets
 	weak var delegate: DatePickerDelegate?
 	@IBOutlet var datePicker: UIDatePicker!
 	
 	
+	// MARK: - View Lifecycle
 	override func viewDidLoad() {
         super.viewDidLoad()
     }
 	
 	
+	// MARK: - IBActions
 	@IBAction func cancelButtonTapped(_ sender: UIButton) {
 		dismiss(animated: true, completion: nil)
 	}

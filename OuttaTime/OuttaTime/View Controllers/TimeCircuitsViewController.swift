@@ -10,6 +10,7 @@ import UIKit
 
 class TimeCircuitsViewController: UIViewController {
 
+	// MARK: - Properties and Outlets
 	var currentSpeed: Int = 0
 	var timer = Timer()
 	var datePickerVC = DatePickerViewController()
@@ -26,12 +27,14 @@ class TimeCircuitsViewController: UIViewController {
 		return formatter
 	}()
 	
+	
+	// MARK: - View Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		presentTimeLabel.text = dateFormatter.string(from: Date())
 	}
 	
-	
+	// MARK: - Timer & Speed Methods
 	func startTimer() {
 		timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSpeed(timer:))
 	}
@@ -60,7 +63,7 @@ class TimeCircuitsViewController: UIViewController {
 		startTimer()
 	}
 	
-	
+	// MARK: - Navigation
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		guard let datePickerVC = segue.destination as? DatePickerViewController else { return }
 		datePickerVC.delegate = self
